@@ -1,7 +1,7 @@
 /*  your css code here. If applicable */
 .grid-container{
-  display:flex;
-  flex-direction:rows;
+  display:grid;
+/*   flex-direction:rows; */
 	justify-content:center;
 	align-items:center;
 	grid-template-columns:repeat(9,1fr);
