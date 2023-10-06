@@ -1,51 +1,33 @@
-/*  your css code here. If applicable */
-.grid-container{
-  display:grid;
-	width:100vw;
-/*   flex-direction:rows; */
-	justify-content:center;
-	align-items:center;
-	grid-template-columns:repeat(9,1fr);
-	gap:5px;
-}
-.grid-item{
-	height:150px;
-	width:200px;
-	background-color:lightgray;
-	border-radius:5px;
-	font-size:40px;
-	
+/* Reset some default styles */
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
-
-@media screen and (max-width:1200px){
-	.grid-container{
-	grid-template-columns: repeat(8,1fr);
-	}
+/* Center the content in the body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-@media screen and (max-width:1000px){
-	.grid-container{
-	grid-template-columns: repeat(7,1fr);
-	}
+/* Define the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+  grid-gap: 5px;
+  max-width: 1200px; /* Limit container width */
+  padding: 10px;
 }
-@media screen and (max-width:800px){
-	.grid-container{
-	grid-template-columns: repeat(6,1fr);
-	}
-}
-@media screen and (max-width:600px){
-	.grid-container{
-	grid-template-columns: repeat(5,1fr);
-	}
-}
-@media screen and (max-width:400px){
-	.grid-container{
-	grid-template-columns: repeat(4,1fr);
-	}
-}
-@media screen and (max-width:200px){
-	.grid-container{
-	grid-template-columns: repeat(3,1fr);
-	}
+
+/* Style the grid items */
+.grid-item {
+  height: 150px;
+  background-color: lightgray;
+  border-radius: 5px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
