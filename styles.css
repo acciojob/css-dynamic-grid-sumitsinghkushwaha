@@ -1,12 +1,15 @@
 /*  your css code here. If applicable */
-.grid-item{
-	height:150px;
-	width:200px;
-	display:flex;
+.grid-container{
+  display:flex;
+  flex-direction:rows;
 	justify-content:center;
 	align-items:center;
 	grid-template-columns:repeat(9,1fr);
 	gap:5px;
+}
+.grid-item{
+	height:150px;
+	width:200px;
 	background-color:lightgray;
 	border-radius:5px;
 	font-size:40px;
@@ -15,21 +18,33 @@
 
 
 @media screen and (max-width:1200px){
+	.grid-container{
 	grid-template-columns: repeat(8,1fr);
+	}
 }
 
 @media screen and (max-width:1000px){
+	.grid-container{
 	grid-template-columns: repeat(7,1fr);
+	}
 }
 @media screen and (max-width:800px){
+	.grid-container{
 	grid-template-columns: repeat(6,1fr);
+	}
 }
 @media screen and (max-width:600px){
+	.grid-container{
 	grid-template-columns: repeat(5,1fr);
+	}
 }
 @media screen and (max-width:400px){
+	.grid-container{
 	grid-template-columns: repeat(4,1fr);
+	}
 }
 @media screen and (max-width:200px){
+	.grid-container{
 	grid-template-columns: repeat(3,1fr);
+	}
 }
